@@ -26,7 +26,7 @@
                 element.attachEvent('on' + eventName, eventHandler);
             }
         }
-
+        
         // Send a message to the parent
         var sendMessage = function (msg) {
             // Make sure you are sending a string, and to stringify JSON
@@ -36,6 +36,9 @@
         var results = document.getElementById('results'),
             messageButton = document.getElementById('message_button');
 
+        results.innerHTML += window.location.href;
+        results.innerHTML += document.URL;
+        
         // Listen to messages from parent window
         bindEvent(window, 'message', function (e) {
             results.innerHTML = e.data;
