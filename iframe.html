@@ -15,7 +15,7 @@
     <h1>Hello there, i'm an iframe</h1>
     <p>Send Message: <button id="message_button">Hi parent</button></p>
     <p>Got Message:</p>
-    <div id="results" onload="this.innerHTML += window.location.href;"></div>
+    <div id="results" onload="document.getElementById('results').innerHTML += window.location.href;"></div>
 
     <script>
         // addEventListener support for IE8
